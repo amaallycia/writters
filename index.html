@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative writting</title>
+  </head>
+  <link rel="stylesheet" href="src/style.css" />
+  <style>
+    body {
+      background-color: rgb(3, 3, 3);
+    }
+
+    h2 {
+      text-align: center;
+      color: pink;
+      padding: 10px;
+      border: 1px solid palevioletred;
+      border-radius: 5px;
+      font-size: 35px;
+    }
+    .hello {
+      text-align: center;
+      font-size: 21px;
+      max-width: 60%;
+      padding-left: 20%;
+      color: white;
+      padding-bottom: 10px;
+      font-weight: 300;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+    ul {
+      text-align: center;
+      padding: 5px;
+    }
+    li {
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      font-family: "Times New Roman", Times, serif;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px 10px 30px;
+      border-radius: 30px;
+      background-color: royalblue;
+      box-shadow: 3px 3px 3px;
+      border: 0px;
+    }
+    .yes {
+      display: block;
+      margin: 0 auto;
+      color: blueviolet;
+      padding-left: 40%;
+      max-width: 60%;
+      padding-bottom: 3%;
+      font-size: 18px;
+    }
+    yes:hover {
+      cursor: pointer;
+      color: antiquewhite;
+    }
+    button:hover {
+      cursor: pointer;
+      color: azure;
+    }
+    img {
+      width: 50%;
+    }
+  </style>
+  <body>
+    <strong>
+      <h1>CREATIVE WRITERS 📚</h1>
+      <h2>Fiction and Nonfiction writers</h2>
+    </strong>
+    <section class="hello">
+      Creative writting its an emphasis on narrative craft , using words to
+      convey emotions to the reader through imagnation and invention. For
+      example poems, short stories,novels, playwriting.
+    </section>
+    <div>
+      <img
+        src="https://img.freepik.com/free-photo/horizontal-view-happy-delighted-lady-has-inspiration-writing-new-novel_273609-17880.jpg?w=740&t=st=1690122803~exp=1690123403~hmac=105a1e42a91a72d937ec869f93456ea00e4bec797905054d0867f2422843137b"
+        female
+        writer=""
+      />
+    </div>
+    <br />
+    <footer>
+      To be best Creative writer you need to combine
+      <ul>
+        <li>Point of view</li>
+        <li>Tone</li>
+        <li>Setting</li>
+        <li>Conflict</li>
+        <li>Theme</li>
+        <li>Plot</li>
+        <li>Style</li>
+      </ul>
+
+      with a story that resonates with audience's of present and future.
+    </footer>
+    <a
+      href="https://www.google.com/url?client=internal-element-cse&cx=012684331380167808104:oe5oj--md1a&q=https://en.wikipedia.org/wiki/Creative_writing&sa=U&ved=2ahUKEwiCoLaWk6WAAxWrQfEDHW_jDW0QFnoECAQQAQ&usg=AOvVaw09JBHrDx_u_qnetZPniFBa"
+      class="yes"
+    >
+      for more information click here
+    </a>
+    <button>Subscribe</button>
+    <a href="about.html"> About me </a>
+    <script>
+      function Subscribe() {
+        let name = prompt("what is your name");
+        alert("Thank you " + name + " for subscribing😍");
+      }
+      if (name === "hassan") {
+        alert("you must be very stupid");
+      }
+      let Subscribtionbutton = document.querySelector("button");
+      Subscribtionbutton.addEventListener("click", Subscribe);
+    </script>
+  </body>
+</html>

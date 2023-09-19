@@ -1,0 +1,44 @@
+h1 {
+  text-align: center;
+  color: black;
+  background: rgb(56, 162, 189);
+  font-family: "stake " serif;
+  font: bold;
+  font-size: 50px;
+  border-radius: 20px;
+}
+img {
+  margin: 0 auto;
+  display: block;
+  width: 550px;
+  max-width: 100%;
+  padding: auto auto 50px;
+}
+video {
+  margin: 0 auto;
+  display: block;
+  width: 550px;
+  max-width: 100%;
+  padding: auto auto 50px;
+}
+body {
+  background: #000;
+}
+div {
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+  background: #ffff;
+  bottom: 10px;
+}
+P {
+  color: pink;
+  text-decoration: underline;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+footer {
+  text-align: center;
+  color: aliceblue;
+  font-size: 20px;
+}
