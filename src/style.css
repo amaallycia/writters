@@ -59,12 +59,15 @@ h4 {
   margin: 10px;
   padding: 7px;
 }
-@media only screen and (min-width: 300px) {
+@media only screen and (min-width: 270px) and (max-width: 800px) {
   #page1conteneur {
-    margin-top: 70px;
+    margin-top: 80px;
   }
   .if {
-    margin-top: 90px;
+    margin-top: 150px;
+  }
+  h4 {
+    display: none;
   }
 }
 .service {
