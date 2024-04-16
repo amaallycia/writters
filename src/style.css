@@ -21,13 +21,35 @@ h2 {
   color: rgb(8, 0, 0);
 }
 h4 {
-  margin-top: 120px;
+  margin-top: 40px;
   background: #5fb9cf;
   width: 100%;
   font-size: 18px;
   padding-top: 5px;
   text-align: center;
   height: 60px;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  h4 {
+    margin-top: 180px;
+    background: #5fb9cf;
+    width: 100%;
+    font-size: 18px;
+    padding-top: 5px;
+    text-align: center;
+    height: 60px;
+  }
+}
+@media only screen and (min-width: 1030px) {
+  h4 {
+    margin-top: 200px;
+    background: #5fb9cf;
+    width: 100%;
+    font-size: 18px;
+    padding-top: 5px;
+    text-align: center;
+    height: 60px;
+  }
 }
 #page1conteneur {
   width: 100%;
@@ -69,7 +91,7 @@ h4 {
   background-color: #444;
 }
 .contents {
-  width: 1200px;
+  width: 100%;
   height: auto;
   margin: auto;
   color: rgb(7, 0, 0);
