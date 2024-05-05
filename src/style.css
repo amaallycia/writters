@@ -7,6 +7,16 @@ footer {
   width: 100%;
   bottom: 0;
 }
+.navbar {
+  background-color: #0e3e4b;
+  color: #f9fcfd;
+}
+.make {
+  color: #0ac2ff;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
 body {
   margin: 0;
   padding: 0;
@@ -56,6 +66,7 @@ h4 {
   }
   .maybe {
     margin-top: -100px;
+    height: 100vh;
   }
 }
 #page1conteneur {
@@ -75,6 +86,20 @@ h4 {
   }
   h4 {
     display: none;
+  }
+  .contents .cn {
+    width: 260px;
+    height: 40px;
+    background: #012d38;
+    color: aliceblue;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    margin-top: 5%;
   }
 }
 .service {
@@ -114,6 +139,7 @@ h4 {
   color: rgb(7, 0, 0);
   position: relative;
   background: rgba(2, 45, 63, 0.664);
+  margin-top: -20%;
 }
 .contents p {
   padding-left: 20px;
@@ -127,13 +153,14 @@ h4 {
   font-family: "Times New Roman", Times, serif;
   font-size: 50px;
   padding-left: 20px;
-  margin-top: 9%;
+  padding-top: 10%;
+  margin-top: 20%;
   letter-spacing: 2px;
 }
 .contents .cn {
-  width: 160px;
+  width: 260px;
   height: 40px;
-  background: #5fb9cf;
+  background: #012d38;
   color: aliceblue;
   border: none;
   margin-bottom: 10px;
@@ -145,7 +172,7 @@ h4 {
 }
 .contents .cn a {
   text-decoration: none;
-  color: rgb(1, 7, 12);
+  color: #0ac2ff;
   transition: 0.3s ease;
 }
 .cn:hover {
