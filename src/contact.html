@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Malawi Digital Marketer</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    form {
+      background-color: #0d253f;
+      color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 40%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      background-color: #fff;
+      color: #0d253f;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8'><polygon points='0,0 14,0 7,7'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 12px;
+    }
+
+    button[type="submit"] {
+      background-color: #f8f6f5;
+      color: #080606;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .wpcf7-response-output {
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #fdfcfc;
+      color: #080808;
+    }
+
+    .wpcf7-response-output.wpcf7-validation-errors,
+    .wpcf7-response-output.wpcf7-mail-sent-ng,
+    .wpcf7-response-output.wpcf7-mail-failed,
+    .wpcf7-response-output.wpcf7-spam,
+    .wpcf7-response-output.wpcf7-validation-aborted {
+      background-color: #fdfcfc;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>contact form</h1>
+      <form action="https://formspree.io/f/moqgzjwj" method="POST">
+        <input type="text" name="Name" placeholder="full name" required />
+        <input type="email" name="Email" placeholder="email" required />
+        <select name="continent">
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Africa">Africa</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+        </select>
+
+        <textarea name="message" placeholder="message" required></textarea>
+
+        <button type="submit">send</button>
+      </form>
+    </div>
+
+    <footer class="mt-5 bg-dark text-light text-center py-3">
+      <p>&copy; 2024 Malawi Digital Marketer. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
-footer {
-  background-color: #333;
+.put {
+  background-color: #0e3e4b;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -7,9 +7,12 @@ footer {
   width: 100%;
   bottom: 0;
 }
+.put p {
+  color: #f8f8f8;
+}
 .navbar {
   background-color: #0e3e4b;
-  color: #f9fcfd;
+  color: #f8f8f8;
 }
 .make {
   color: #0ac2ff;
@@ -56,13 +59,15 @@ h4 {
 }
 @media only screen and (min-width: 1030px) {
   h4 {
-    margin-top: 200px;
-    background: #5fb9cf;
+    margin-top: 30px;
+    background: linear-gradient(to bottom, #7ab3f5 13%, #14ccff 72%);
+
     width: 100%;
     font-size: 18px;
-    padding-top: 5px;
+    padding-top: 10px;
     text-align: center;
     height: 60px;
+    color: #f8f8f8;
   }
   .maybe {
     margin-top: -100px;
@@ -117,7 +122,7 @@ h4 {
 
 .service a {
   display: block;
-  background-color: #5fb9cf;
+  background-color: #0e3e4b;
   color: #fff;
   padding: 5px 8px;
   margin-left: 10px;
@@ -130,7 +135,9 @@ h4 {
 }
 
 .service a:hover {
-  background-color: #444;
+  background-color: #fffcfc;
+  color: #0e3e4b;
+  cursor: pointer;
 }
 .contents {
   width: 100%;
@@ -183,4 +190,57 @@ h4 {
   font-size: 60px;
   font-family: sans-serif;
   font-weight: bold;
+}
+
+.get {
+  background-color: #dee0e0;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -40px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input,
+select,
+textarea {
+  width: 48%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.hello {
+  width: 50%;
+  background-color: #012d38;
+  color: #fdfdfd;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: inset;
+}
+hr {
+  color: #012d38;
+}
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+.get h1 {
+  font-weight: bold;
+  color: #000;
+  margin-top: 20px;
+}
+.if {
+  font-weight: bold;
+  font-size: 50px;
 }
