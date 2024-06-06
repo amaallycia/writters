@@ -1,22 +1,11 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+var copy = document.querySelector(".logo-slide").cloneNode(true);
+document.querySelector(".gallery").appendChild(copy);
+const toastTrigger = document.getElementById("liveToastBtn");
+const toastLiveExample = document.getElementById("liveToast");
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 7000); // Change the delay to your preference (in milliseconds)
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+  toastTrigger.addEventListener("click", () => {
+    toastBootstrap.show();
+  });
 }

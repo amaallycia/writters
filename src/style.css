@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .put {
   background-color: #0e3e4b;
   color: #fff;
@@ -23,11 +26,15 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f2f2f2;
 }
 
 p {
   margin: 0;
   color: rgb(7, 0, 7);
+}
+.container p {
+  color: black;
 }
 
 .icon {
@@ -35,7 +42,7 @@ p {
 }
 h2 {
   text-align: center;
-  color: rgb(8, 0, 0);
+  color: #f9fbfc;
 }
 h4 {
   margin-top: 40px;
@@ -60,14 +67,14 @@ h4 {
 @media only screen and (min-width: 1030px) {
   h4 {
     margin-top: 30px;
-    background: linear-gradient(to bottom, #7ab3f5 13%, #14ccff 72%);
+    background: linear-gradient(to bottom, #fbfbfc 13%, #0e3e4b 72%);
 
     width: 100%;
     font-size: 18px;
     padding-top: 10px;
     text-align: center;
     height: 60px;
-    color: #f8f8f8;
+    color: black;
   }
   .maybe {
     margin-top: -100px;
@@ -107,10 +114,8 @@ h4 {
     margin-top: 5%;
   }
 }
-.service {
-  flex: 1 0px;
-  margin: 10px;
-  padding: 7px;
+.gallery p {
+  color: #f9fcfd;
 }
 
 .service img {
@@ -120,7 +125,7 @@ h4 {
   border-spacing: 10px, 10px, 10px, 10px;
 }
 
-.service a {
+.gallery a {
   display: block;
   background-color: #0e3e4b;
   color: #fff;
@@ -243,4 +248,63 @@ input[type="submit"]:hover {
 .if {
   font-weight: bold;
   font-size: 50px;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: hidden;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.gallery img {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.logo-slide {
+  display: inline-block;
+
+  animation: 20s slide infinite linear;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.gallery:hover .logo-slide {
+  animation-play-state: paused;
+}
+.gallery::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0)) #012d38;
+  position: absolute;
+  top: 0;
+
+  width: 200px;
+  height: 150px;
+  content: "";
+  z-index: 2;
+}
+
+.gallery::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0)) #012d38;
+  position: absolute;
+  top: 0;
+
+  width: 200px;
+  height: 150px;
+  content: "";
+  z-index: 2;
 }
