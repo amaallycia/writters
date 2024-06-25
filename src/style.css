@@ -169,26 +169,36 @@ h4 {
   margin-top: 20%;
   letter-spacing: 2px;
 }
-.contents .cn {
-  width: 260px;
-  height: 40px;
+.container p {
+  padding-left: 20px;
+  padding-bottom: 25px;
+  font-family: Arial;
+
+  line-height: 30px;
+  color: #000;
+}
+.container .cn {
+  width: 100px;
+  height: 30px;
   background: #012d38;
   color: aliceblue;
   border: none;
   margin-bottom: 10px;
   margin-left: 20px;
   font-size: 18px;
-  border-radius: 10px;
+  border-radius: 30px;
   cursor: pointer;
   transition: 0.4s ease;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
-.contents .cn a {
+.container .cn a {
   text-decoration: none;
-  color: #0ac2ff;
+  color: #f6f6f7;
   transition: 0.3s ease;
 }
 .cn:hover {
-  background: rgb(247, 244, 245);
+  background: rgb(23, 69, 131);
 }
 .contents span {
   color: #f9fcfd;
@@ -307,4 +317,101 @@ input[type="submit"]:hover {
   height: 150px;
   content: "";
   z-index: 2;
+}
+
+.footer {
+  background-color: #f6f8f8;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.contain {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  font-weight: bold;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon a {
+  margin: 0 10px;
+  font-size: 40px;
+
+  transition: color 0.2s ease;
+}
+
+.icon a:hover {
+  color: #0a0000;
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-col {
+  width: 45%;
+}
+
+.footer-col h4 {
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 5px;
+}
+
+.footer-bottom {
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  background: #012d38;
+  width: 100%;
+  margin-bottom: none;
+  font-size: medium;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .footer-col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    justify-content: center;
+  }
 }
