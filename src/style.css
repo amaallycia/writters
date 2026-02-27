@@ -297,7 +297,7 @@ input[type="submit"]:hover {
 }
 .gallery::before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0)) #012d38;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0)) #e2e3e4;
   position: absolute;
   top: 0;
 
@@ -309,7 +309,7 @@ input[type="submit"]:hover {
 
 .gallery::after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0)) #012d38;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0)) #d1d5d6;
   position: absolute;
   top: 0;
 
