@@ -297,19 +297,19 @@ input[type="submit"]:hover {
 }
 .gallery::before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0)) #e2e3e4;
+  background: transparent;
   position: absolute;
   top: 0;
 
-  width: 200px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   content: "";
   z-index: 2;
 }
 
 .gallery::after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0)) #d1d5d6;
+  background: transparent;
   position: absolute;
   top: 0;
 
