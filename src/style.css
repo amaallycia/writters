@@ -77,12 +77,8 @@ h4 {
     color: black;
   }
   .maybe {
-    position: relative;
-    z-index: 1;
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    background-image: url("medias/6.png");
+    margin-top: -100px;
+    height: 100vh;
   }
 }
 #page1conteneur {
