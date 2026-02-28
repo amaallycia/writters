@@ -39,7 +39,162 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
 
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="src/style.css" />
+    <style>
+      /* --- Popping Chat Bubble Reviews --- */
+      .reviews-section {
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-top: 40px;
+      }
+
+      .review-bubble {
+        position: relative;
+        background: var(--light-blue);
+        color: #333;
+        padding: 20px;
+        border-radius: 18px;
+        border-bottom-left-radius: 4px;
+        margin-bottom: 30px;
+        max-width: 85%;
+        box-shadow: 0 4px 10px rgba(0, 86, 179, 0.15);
+        animation: popIn 0.5s ease-out forwards;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      .review-bubble:nth-child(odd) {
+        margin-left: 0;
+      }
+
+      .review-bubble:nth-child(even) {
+        margin-left: auto;
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-bottom-right-radius: 4px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .review-bubble::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-top-color: var(--light-blue);
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: 0;
+        margin-bottom: -15px;
+      }
+
+      .review-bubble:nth-child(even)::before {
+        display: none;
+      }
+
+      .review-bubble:nth-child(even)::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-top-color: white;
+        border-bottom: 0;
+        border-right: 0;
+        margin-right: 0;
+        margin-bottom: -15px;
+      }
+
+      .reviewer-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .reviewer-avatar {
+        width: 40px;
+        height: 40px;
+        background-color: var(--accent-blue);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+
+      .reviewer-name {
+        font-weight: bold;
+        color: var(--dark-navy);
+        font-size: 0.95rem;
+      }
+
+      .review-date {
+        font-size: 0.75rem;
+        color: #888;
+        margin-left: auto;
+      }
+
+      .stars {
+        color: #ffc107;
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+      }
+
+      @keyframes popIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .review-bubble:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .review-bubble:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      .review-bubble:nth-child(3) {
+        animation-delay: 0.5s;
+      }
+
+      /* FAQ Styling */
+      .faq-item {
+        border-left: 4px solid var(--accent-blue);
+        background: #fff;
+        padding: 15px;
+        margin-bottom: 15px;
+        transition: transform 0.2s;
+      }
+      .faq-item:hover {
+        transform: translateX(5px);
+      }
+
+      footer {
+        background-color: var(--dark-navy);
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        .review-bubble {
+          max-width: 100%;
+        }
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -160,14 +315,14 @@
         background-position: center;
         height: 80vh;
         position: relative;
-
+        z-index: 1;
         background: linear-gradient(
           to top,
           rgba(0, 0, 0, 0.5) 50% rgba(0, 0, 0, 0.5) 50%
         );
       "
     >
-      <div class="contents" style="text-align: center; z-index: 2">
+      <div class="contents" style="text-align: center">
         <h1><span> Malawi Digital Marketers</span><br /></h1>
 
         <h2 class="make">Increase your online business sale.</h2>
@@ -179,7 +334,8 @@
       </div>
     </div>
     <div class="get">
-      <h1>GET STARTED</h1>
+      <h3>Inquries</h3>
+
       <form action="https://formspree.io/f/moqgzjwj" method="POST">
         <input
           type="text"
@@ -206,12 +362,12 @@
 
         <textarea
           name="message"
-          placeholder="message"
+          placeholder="How can we help your business grow?"
           required
           autocomplete="off"
         ></textarea>
 
-        <button class="hello" type="submit">send</button>
+        <button class="hello" type="submit">send Message</button>
       </form>
     </div>
     <h4>
@@ -484,6 +640,97 @@
     </div>
     <br />
 
+    <!-- Reviews Section with Popping Bubbles -->
+    <section class="reviews-section mt-5">
+      <div class="text-center mb-5">
+        <h2 class="font-weight-bold" style="color: var(--dark-navy)">
+          What Our Clients Say
+        </h2>
+        <p class="text-muted">Don't just take our word for it.</p>
+      </div>
+
+      <!-- Review 1 -->
+      <div class="review-bubble">
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">AM</div>
+          <div>
+            <div class="reviewer-name">Alex M.</div>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="review-date">2 days ago</div>
+        </div>
+        <p class="mb-0">
+          Great service! The team helped us boost our online presence in Malawi
+          within just two weeks. Highly recommended.
+        </p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-bubble">
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">SK</div>
+          <div>
+            <div class="reviewer-name">Sarah K.</div>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <div class="review-date">1 week ago</div>
+        </div>
+        <p class="mb-0">
+          Professional, reliable, and great at what they do. They redesigned our
+          logo and handled our social media perfectly.
+        </p>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-bubble">
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">JL</div>
+          <div>
+            <div class="reviewer-name">James L.</div>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="review-date">3 weeks ago</div>
+        </div>
+        <p class="mb-0">
+          I saw a 50% increase in leads after they optimized our website.
+          Fantastic digital marketing experts!
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mt-5">
+      <h2 class="font-weight-bold mb-4" style="color: var(--dark-navy)">
+        Frequently Asked Questions
+      </h2>
+      <div class="faq-item">
+        <h5>What services do you offer?</h5>
+        <p class="text-muted mb-0">
+          We specialize in SEO, social media management, graphic design, and
+          content creation for businesses in Malawi and beyond.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h5>How long does it take to see results?</h5>
+        <p class="text-muted mb-0">
+          Most clients see initial improvements in website traffic within 30
+          days, with significant ROI typically seen within 3-6 months.
+        </p>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="contain">
         <div class="footer-top">
@@ -532,7 +779,9 @@
       </div>
       <div class="footer-bottom">
         <p style="color: aliceblue">
-          <b>&copy; 2024 Madima. All Rights Reserved.</b>
+          <b>&copy; 2024 Madima. All Rights Reserved.</b> <br /><i
+            >Coded by Amaal</i
+          >
         </p>
       </div>
     </footer>

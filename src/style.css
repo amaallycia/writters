@@ -250,7 +250,7 @@ hr {
 input[type="submit"]:hover {
   background-color: #3e8e41;
 }
-.get h1 {
+.get h3 {
   font-weight: bold;
   color: #000;
   margin-top: 20px;
@@ -413,5 +413,152 @@ input[type="submit"]:hover {
 
   .icon {
     justify-content: center;
+  }
+  /* --- Popping Chat Bubble Reviews --- */
+  .reviews-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+  }
+
+  .review-bubble {
+    position: relative;
+    background: var(--light-blue);
+    color: #333;
+    padding: 20px;
+    border-radius: 18px;
+    border-bottom-left-radius: 4px;
+    margin-bottom: 30px;
+    max-width: 85%;
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.15);
+    animation: popIn 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .review-bubble:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  .review-bubble:nth-child(even) {
+    margin-left: auto;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .review-bubble::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: var(--light-blue);
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: 0;
+    margin-bottom: -15px;
+  }
+
+  .review-bubble:nth-child(even)::before {
+    display: none;
+  }
+
+  .review-bubble:nth-child(even)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    border-right: 0;
+    margin-right: 0;
+    margin-bottom: -15px;
+  }
+
+  .reviewer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  .reviewer-name {
+    font-weight: bold;
+    color: var(--dark-navy);
+    font-size: 0.95rem;
+  }
+
+  .review-date {
+    font-size: 0.75rem;
+    color: #888;
+    margin-left: auto;
+  }
+
+  .stars {
+    color: #ffc107;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+
+  @keyframes popIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .review-bubble:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .review-bubble:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  .review-bubble:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+
+  /* FAQ Styling */
+  .faq-item {
+    border-left: 4px solid var(--accent-blue);
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+  }
+  .faq-item:hover {
+    transform: translateX(5px);
+  }
+
+  footer {
+    background-color: var(--dark-navy);
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .review-bubble {
+      max-width: 100%;
+    }
   }
 }

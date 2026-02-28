@@ -1,103 +1,484 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Malawi Digital Marketer</title>
+    <title>Contact Malawi Digital Marketer</title>
 
+    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary-blue: #0056b3;
+        --accent-blue: #007bff;
+        --light-blue: #e7f1ff;
+        --dark-navy: #0d253f;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7f6;
+        color: #333;
+      }
+
+      /* --- Header & Contact Section --- */
+      .contact-section {
+        padding: 40px 0;
+      }
+
+      .map-container {
+        width: 100%;
+        height: 350px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 91, 187, 0.15);
+        margin-bottom: 20px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      /* --- Professional Form Styling --- */
+      .custom-form {
+        background-color: var(--dark-navy);
+        color: #fff;
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(13, 37, 63, 0.3);
+        width: 100%;
+      }
+
+      .custom-form h2 {
+        margin-bottom: 25px;
+        font-weight: 600;
+      }
+
+      .form-control {
+        border-radius: 6px;
+        padding: 12px;
+        border: 1px solid #ced4da;
+        height: auto;
+      }
+
+      .form-control:focus {
+        border-color: var(--accent-blue);
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+
+      /* --- FIXED SELECT DROPDOWN --- */
+      .select-wrapper {
+        position: relative;
+      }
+
+      .select-wrapper select {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 100%;
+        padding-right: 40px; /* Important: Space for the arrow */
+        cursor: pointer;
+      }
+
+      /* Custom arrow using Font Awesome */
+      .select-wrapper::after {
+        content: "\f107"; /* Font Awesome chevron-down */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--dark-navy);
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      /* --- Button Styling --- */
+      .btn-custom {
+        background-color: var(--accent-blue);
+        color: white;
+        font-weight: bold;
+        padding: 12px;
+        border-radius: 6px;
+        width: 100%;
+        transition: all 0.3s;
+        border: none;
+        font-size: 16px;
+      }
+
+      .btn-custom:hover {
+        background-color: var(--primary-blue);
+        transform: translateY(-2px);
+      }
+
+      /* --- Popping Chat Bubble Reviews --- */
+      .reviews-section {
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-top: 40px;
+      }
+
+      .review-bubble {
+        position: relative;
+        background: var(--light-blue);
+        color: #333;
+        padding: 20px;
+        border-radius: 18px;
+        border-bottom-left-radius: 4px;
+        margin-bottom: 30px;
+        max-width: 85%;
+        box-shadow: 0 4px 10px rgba(0, 86, 179, 0.15);
+        animation: popIn 0.5s ease-out forwards;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      .review-bubble:nth-child(odd) {
+        margin-left: 0;
+      }
+
+      .review-bubble:nth-child(even) {
+        margin-left: auto;
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-bottom-right-radius: 4px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .review-bubble::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-top-color: var(--light-blue);
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: 0;
+        margin-bottom: -15px;
+      }
+
+      .review-bubble:nth-child(even)::before {
+        display: none;
+      }
+
+      .review-bubble:nth-child(even)::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-top-color: white;
+        border-bottom: 0;
+        border-right: 0;
+        margin-right: 0;
+        margin-bottom: -15px;
+      }
+
+      .reviewer-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .reviewer-avatar {
+        width: 40px;
+        height: 40px;
+        background-color: var(--accent-blue);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+
+      .reviewer-name {
+        font-weight: bold;
+        color: var(--dark-navy);
+        font-size: 0.95rem;
+      }
+
+      .review-date {
+        font-size: 0.75rem;
+        color: #888;
+        margin-left: auto;
+      }
+
+      .stars {
+        color: #ffc107;
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+      }
+
+      @keyframes popIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .review-bubble:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .review-bubble:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      .review-bubble:nth-child(3) {
+        animation-delay: 0.5s;
+      }
+
+      /* FAQ Styling */
+      .faq-item {
+        border-left: 4px solid var(--accent-blue);
+        background: #fff;
+        padding: 15px;
+        margin-bottom: 15px;
+        transition: transform 0.2s;
+      }
+      .faq-item:hover {
+        transform: translateX(5px);
+      }
+
+      footer {
+        background-color: var(--dark-navy);
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        .review-bubble {
+          max-width: 100%;
+        }
+      }
+    </style>
   </head>
-  <style>
-    form {
-      background-color: #0d253f;
-      color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      width: 40%;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    select,
-    textarea {
-      background-color: #fff;
-      color: #0d253f;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      width: 100%;
-    }
-
-    select {
-      appearance: none;
-      -webkit-appearance: none;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8'><polygon points='0,0 14,0 7,7'/></svg>");
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      background-size: 12px;
-    }
-
-    button[type="submit"] {
-      background-color: #f8f6f5;
-      color: #080606;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    .wpcf7-response-output {
-      margin-top: 10px;
-      border: none;
-      border-radius: 5px;
-      padding: 10px;
-      background-color: #fdfcfc;
-      color: #080808;
-    }
-
-    .wpcf7-response-output.wpcf7-validation-errors,
-    .wpcf7-response-output.wpcf7-mail-sent-ng,
-    .wpcf7-response-output.wpcf7-mail-failed,
-    .wpcf7-response-output.wpcf7-spam,
-    .wpcf7-response-output.wpcf7-validation-aborted {
-      background-color: #fdfcfc;
-    }
-  </style>
   <body>
-    <div class="container">
-      <h1>contact form</h1>
-      <form action="https://formspree.io/f/moqgzjwj" method="POST">
-        <input type="text" name="Name" placeholder="full name" required />
-        <input type="email" name="Email" placeholder="email" required />
-        <select name="continent">
-          <option value="Asia">Asia</option>
-          <option value="Europe">Europe</option>
-          <option value="Africa">Africa</option>
-          <option value="North America">North America</option>
-          <option value="South America">South America</option>
-        </select>
+    <div class="container contact-section">
+      <h1
+        class="text-center mb-2 font-weight-bold"
+        style="color: var(--dark-navy)"
+      >
+        Get In Touch
+      </h1>
+      <p class="text-center text-muted mb-5">
+        We'd love to hear from you. Send us a message and we'll respond as soon
+        as possible.
+      </p>
 
-        <textarea name="message" placeholder="message" required></textarea>
+      <div class="row">
+        <!-- Left Column: Info & Map -->
+        <div class="col-lg-5 mb-4">
+          <h4 class="text-primary mb-3">Visit Us</h4>
+          <p class="text-muted">Malawi Digital Marketer<br />Limbe, Blantyre</p>
 
-        <button type="submit">send</button>
-      </form>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15390.3128!2d35.0622!3d-15.7867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1933c7d7b2b1f5b7%3A0x4a7c8f2c5e1d3f8!2sLimbe%2C%20Blantyre%2DChisumphi!5e0!3m2!1sen!2smw!4v1697455201234"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+
+          <div class="mt-4">
+            <p class="mb-1">
+              <i class="fas fa-envelope text-primary mr-2"></i>
+              madima.services@gmail.com
+            </p>
+            <p class="mb-1">
+              <i class="fas fa-phone text-primary mr-2"></i> +265 998889070
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="col-lg-7">
+          <form
+            action="https://formspree.io/f/moqgzjwj"
+            method="POST"
+            class="custom-form"
+          >
+            <h2>Send us a Message</h2>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  name="Name"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label>Email Address</label>
+                <input
+                  type="email"
+                  name="Email"
+                  class="form-control"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label>Select Region</label>
+              <div class="select-wrapper">
+                <select name="continent" class="form-control">
+                  <option value="Africa">Africa</option>
+                  <option value="Asia">Asia</option>
+                  <option value="Europe">Europe</option>
+                  <option value="North America">North America</option>
+                  <option value="South America">South America</option>
+                  <option value="Australia">Australia</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label>Your Message</label>
+              <textarea
+                name="message"
+                rows="4"
+                class="form-control"
+                placeholder="How can we help your business grow?"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-custom mt-2">
+              <i class="fas fa-paper-plane mr-2"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Reviews Section with Popping Bubbles -->
+      <section class="reviews-section mt-5">
+        <div class="text-center mb-5">
+          <h2 class="font-weight-bold" style="color: var(--dark-navy)">
+            What Our Clients Say
+          </h2>
+          <p class="text-muted">Don't just take our word for it.</p>
+        </div>
+
+        <!-- Review 1 -->
+        <div class="review-bubble">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">AM</div>
+            <div>
+              <div class="reviewer-name">Alex M.</div>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="review-date">2 days ago</div>
+          </div>
+          <p class="mb-0">
+            Great service! The team helped us boost our online presence in
+            Malawi within just two weeks. Highly recommended.
+          </p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-bubble">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">SK</div>
+            <div>
+              <div class="reviewer-name">Sarah K.</div>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="review-date">1 week ago</div>
+          </div>
+          <p class="mb-0">
+            Professional, reliable, and great at what they do. They redesigned
+            our logo and handled our social media perfectly.
+          </p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-bubble">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">JL</div>
+            <div>
+              <div class="reviewer-name">James L.</div>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="review-date">3 weeks ago</div>
+          </div>
+          <p class="mb-0">
+            I saw a 50% increase in leads after they optimized our website.
+            Fantastic digital marketing experts!
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="mt-5">
+        <h2 class="font-weight-bold mb-4" style="color: var(--dark-navy)">
+          Frequently Asked Questions
+        </h2>
+        <div class="faq-item">
+          <h5>What services do you offer?</h5>
+          <p class="text-muted mb-0">
+            We specialize in SEO, social media management, graphic design, and
+            content creation for businesses in Malawi and beyond.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h5>How long does it take to see results?</h5>
+          <p class="text-muted mb-0">
+            Most clients see initial improvements in website traffic within 30
+            days, with significant ROI typically seen within 3-6 months.
+          </p>
+        </div>
+      </section>
     </div>
 
-    <footer class="mt-5 bg-dark text-light text-center py-3">
-      <p>&copy; 2024 Malawi Digital Marketer. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-0 text-white">
+          &copy; 2024 Malawi Digital Marketer. All rights reserved.
+        </p>
+      </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script src="scripts.js"></script>
   </body>
 </html>
