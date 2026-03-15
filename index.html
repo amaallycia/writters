@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-26MKZVPYG3"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-26MKZVPYG3");
+    </script>
+    <meta charset="UTF-8" />
+    <meta
+      name="google-site-verification"
+      content="mJ0V1QnwXHHGOlJoi9zPBBmbunNbms_Ag5RiMTgiZCgb "
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Malawi Digital  Marketers is a leading  digital markerting agency  in blantyre  offering  SEO, socia media marketing, Web design and  online advertising  services  across malawi
+     "
+    />
+    <meta
+      name="keywords"
+      content="digital markerting Malawi,digital markerting agency blantyre,seo services Malawi, Socia Media markerting  Malawi,web design Malawi,online markerting Malawi ,advertising agency blantyre,branding services malawi,website development Malawi"
+    />
+    <title>
+      Digital Marketing Agency in Blantyre Malawi|Malawi Digital Marketers
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="src/style.css" />
+    <style>
+      /* --- Popping Chat Bubble Reviews --- */
+      .reviews-section {
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-top: 40px;
+      }
+
+      .review-bubble {
+        position: relative;
+        background: var(--light-blue);
+        color: #333;
+        padding: 20px;
+        border-radius: 18px;
+        border-bottom-left-radius: 4px;
+        margin-bottom: 30px;
+        max-width: 85%;
+        box-shadow: 0 4px 10px rgba(0, 86, 179, 0.15);
+        animation: popIn 0.5s ease-out forwards;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      .review-bubble:nth-child(odd) {
+        margin-left: 0;
+      }
+
+      .review-bubble:nth-child(even) {
+        margin-left: auto;
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-bottom-right-radius: 4px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .review-bubble::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-top-color: var(--light-blue);
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: 0;
+        margin-bottom: -15px;
+      }
+
+      .review-bubble:nth-child(even)::before {
+        display: none;
+      }
+
+      .review-bubble:nth-child(even)::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-top-color: white;
+        border-bottom: 0;
+        border-right: 0;
+        margin-right: 0;
+        margin-bottom: -15px;
+      }
+
+      .reviewer-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .reviewer-avatar {
+        width: 40px;
+        height: 40px;
+        background-color: var(--accent-blue);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+
+      .reviewer-name {
+        font-weight: bold;
+        color: var(--dark-navy);
+        font-size: 0.95rem;
+      }
+
+      .review-date {
+        font-size: 0.75rem;
+        color: #888;
+        margin-left: auto;
+      }
+
+      .stars {
+        color: #ffc107;
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+      }
+
+      @keyframes popIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .review-bubble:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .review-bubble:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      .review-bubble:nth-child(3) {
+        animation-delay: 0.5s;
+      }
+
+      /* FAQ Styling */
+      .faq-item {
+        border-left: 4px solid var(--accent-blue);
+        background: #fff;
+        padding: 15px;
+        margin-bottom: 15px;
+        transition: transform 0.2s;
+      }
+      .faq-item:hover {
+        transform: translateX(5px);
+      }
+
+      footer {
+        background-color: var(--dark-navy);
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        .review-bubble {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand text-light" href="home.html">
+          <img
+            src="medias/logo madima.jpg"
+            alt="logo"
+            style="max-height: 70px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span
+            class="navbar-toggler-icon"
+            style="
+              background-color: rgb(203, 212, 219);
+              color: rgb(11, 32, 63);
+              font-weight: bolder;
+              text-align: center;
+            "
+          ></span>
+          <span
+            class="nav"
+            style="
+              color: rgb(243, 247, 252);
+              font-weight: bolder;
+              text-align: center;
+            "
+            >Menu</span
+          >
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="home.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Web Development
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Graphic Designs</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Web Based Applications</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">Email Hosting</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-light" href="src/blog.html">Blog</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href=""
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Digital Marketing Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Link Bulding</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">SOE </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Socia Media Marketing</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Content Creation</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Downloads</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="src/about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="src/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="maybe"
+      style="
+        background-image: url(&quot;medias/6.png&quot;);
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.5) 50% rgba(0, 0, 0, 0.5) 50%
+        );
+      "
+    >
+      <div class="contents" style="text-align: center">
+        <h1><span> Malawi Digital Marketers</span><br /></h1>
+
+        <h2 class="make">Increase your online business sale.</h2>
+        <p>
+          Malawi Digital Marketers is a proffessonal digital marketing agency
+          based in Blantyre,Malawi. we specialize in SEO,Socia-Media markerting,
+          Web-Development,branding and onlineadvertising to help business grow.
+        </p>
+      </div>
+    </div>
+    <div class="get">
+      <h3>Inquries</h3>
+
+      <form action="https://formspree.io/f/moqgzjwj" method="POST">
+        <input
+          type="text"
+          name="Name"
+          placeholder="full name"
+          required
+          autocomplete="off"
+        />
+        <input
+          type="email"
+          name="Email"
+          placeholder="email"
+          required
+          autocomplete="on"
+        />
+        <select name="continent">
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Africa">Africa</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="South America">Others</option>
+        </select>
+
+        <textarea
+          name="message"
+          placeholder="How can we help your business grow?"
+          required
+          autocomplete="off"
+        ></textarea>
+
+        <button class="hello" type="submit">send Message</button>
+      </form>
+    </div>
+    <h4>
+      24/7 Customer Support is available for any queries or assistance you may
+      need.
+    </h4>
+    <h5><b>Trusted by many companies</b> <span>100+</span></h5>
+    <div class="gallery" id="gallery">
+      <div class="logo-slide" id="logo-slide">
+        <img src="medias/loop.jpg" alt="Image 1" />
+        <img src="medias/simba.jpg" alt="Image 2" />
+        <img src="medias/3.png" alt="Image 3" />
+        <img src="medias/logop.jpg" alt="Image 4" />
+        <img src="medias/breez.jpg" alt="Image 5" />
+        <img src="medias/breeze-paradise.jpg" alt="Image 6" />
+        <img src="medias/theater.jpg" alt="Image 7" />
+        <img src="medias/igart.jpg" alt="Image 8" />
+        <img src="medias/prime.jpg" alt="Image 9" />
+      </div>
+    </div>
+
+    <h2 class="if" style="text-align: center; color: black">our services</h2>
+    <hr />
+    <div
+      class="gallery"
+      id="page1conteneur"
+      style="
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 10px, 10px, 10px, 10px;
+        padding: 7px, 7px, 7px, 7px;
+        background: #066e88;
+      "
+    >
+      <div class="digital">
+        <img src="medias/digital markerting.png" alt="" width="290px" /><br />
+
+        <h2>Socia-Media Marketing</h2>
+        <hr />
+        <p style="text-align: center">
+          <br />
+          Unlocking the Power of Social Media Marketing
+          <br />
+          Are you ready to take your brand
+          <br />to new heights? Dive into the dynamic<br />
+          world of social media marketing and <br />watch your business soar!
+          Elevate Your Brand Today!
+        </p>
+        <button type="button" class="btn btn-link text-info">
+          <a href="#">Learn More </a>
+        </button>
+        <br />
+      </div>
+      <div class="web">
+        <img src="medias/website.png" alt="" width="280px" /><br />
+        <h2>Web-Development</h2>
+        <hr />
+        <p style="text-align: center">
+          <br />
+          Transform Your Business with Our Expert <br />Web Development Services
+          If you're<br />
+          looking to take your business to new<br />
+          heights online, you've come to the right <br />place Here's why
+          partnering with us for<br />
+          your web development needs is <br />the best decision you'll make:
+        </p>
+        <br />
+        <button type="button" class="btn btn-link text-info">
+          <a href="#">Learn More </a>
+        </button>
+      </div>
+      <div class="content">
+        <img src="medias/content.png" alt="" width="250px" /><br />
+        <h2>Content-Creation</h2>
+        <hr />
+        <br />
+        <p style="text-align: center">
+          Elevate Your Brand with Our Content <br />Creation Services Whether
+          you're
+          <br />
+          looking to engage your audience, drive <br />traffic to your website,
+          or establish <br />
+          your brand content is key to achieving <br />your goals. At Madima we
+          specialize <br />in creating high-quality, tailored content <br />
+          that captivates, informs, and inspires
+        </p>
+        <button type="button" class="btn btn-link text-info">
+          <a href="#">Learn More </a>
+        </button>
+      </div>
+      <div class="seo">
+        <img src="medias/seo.png" alt="" width="270px" /><br />
+        <h2>Graphic Designing</h2>
+        <hr />
+        <p style="text-align: center">
+          <br />
+          Whether you're in need of a stunning <br />logo, eye-catching social
+          media<br />
+          graphics, engaging infographics,<br />
+          or polished marketing materials, we've got <br />you covered. We pride
+          ourselves on our <br />
+          attention to detail, creativity, and<br />
+          commitment to delivering designs that <br />
+          exceed expectations.
+        </p>
+        <button type="button" class="btn btn-link text-info">
+          <a href="#">Learn More </a>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row mt-5" width="100%">
+        <div class="col-md-6">
+          <h2 style="color: black; font-size: 50px">
+            <b>WHAT MAKES US UNIQUE</b>
+          </h2>
+          <hr />
+          <p>
+            At Malawi Digital Marketer we provide personalized solutions that
+            resonate with your target audience and align with your business
+            objectives. From social media marketing and search engine
+            optimization to email marketing and content creation, we offer a
+            comprehensive range of services to help you succeed online.
+          </p>
+          <p>
+            Our team of experienced digital marketers specializes in creating
+            effective strategies to increase online visibility, attract more
+            customers, and drive business growth. Whether you're a small local
+            business or a large corporation, we tailor our services to meet your
+            specific needs and goals.
+          </p>
+
+          <p>
+            Partner with us today and take your digital presence to the next
+            level. Let's work together to achieve your business goals and drive
+            success in the digital age.
+          </p>
+          <button class="cn"><a href="">lets Talk</a></button>
+        </div>
+
+        <div class="col-md-6">
+          <h3 style="font-size: 40px; color: black">Featured Products</h3>
+          <br />
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  class="d-block w-100"
+                  src="medias/yes.jpg"
+                  alt="First slide"
+                  style="height: 400px; border-radius: 5%"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="medias/uk.jpg"
+                  alt="Second slide"
+                  style="height: 400px; border-radius: 5%"
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="medias/mim.jpg"
+                  alt="Second slide"
+                  style="height: 400px; border-radius: 5%"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="medias/pamba.jpg"
+                  alt="Second slide"
+                  style="height: 400px; border-radius: 5%"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="medias/steel.jpg"
+                  alt="Second slide"
+                  style="height: 400px; border-radius: 5%"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="medias/prime.jpg"
+                  alt="Second slide"
+                  style="height: 400px; border-radius: 5%"
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="medias/comp.jpg"
+                  alt="Second slide"
+                  style="height: 400px; border-radius: 5%"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="medias/nasfarm.jpg"
+                  alt="Second slide"
+                  style="height: 400px; border-radius: 5%"
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="medias/me.jpg"
+                  alt="Third slide"
+                  style="height: 400px; border-radius: 5%"
+                />
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <!-- Reviews Section with Popping Bubbles -->
+    <section class="reviews-section mt-5">
+      <div class="text-center mb-5">
+        <h2 class="font-weight-bold" style="color: var(--dark-navy)">
+          What Our Clients Say
+        </h2>
+        <p class="text-muted">Don't just take our word for it.</p>
+      </div>
+
+      <!-- Review 1 -->
+      <div class="review-bubble">
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">AM</div>
+          <div>
+            <div class="reviewer-name">Alex M.</div>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="review-date">2 days ago</div>
+        </div>
+        <p class="mb-0">
+          Great service! The team helped us boost our online presence in Malawi
+          within just two weeks. Highly recommended.
+        </p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-bubble">
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">SK</div>
+          <div>
+            <div class="reviewer-name">Sarah K.</div>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <div class="review-date">1 week ago</div>
+        </div>
+        <p class="mb-0">
+          Professional, reliable, and great at what they do. They redesigned our
+          logo and handled our social media perfectly.
+        </p>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-bubble">
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">JL</div>
+          <div>
+            <div class="reviewer-name">James L.</div>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="review-date">3 weeks ago</div>
+        </div>
+        <p class="mb-0">
+          I saw a 50% increase in leads after they optimized our website.
+          Fantastic digital marketing experts!
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mt-5">
+      <h2 class="font-weight-bold mb-4" style="color: var(--dark-navy)">
+        Frequently Asked Questions
+      </h2>
+      <div class="faq-item">
+        <h5>What services do you offer?</h5>
+        <p class="text-muted mb-0">
+          We specialize in SEO, social media management, graphic design, and
+          content creation for businesses in Malawi and beyond.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h5>How long does it take to see results?</h5>
+        <p class="text-muted mb-0">
+          Most clients see initial improvements in website traffic within 30
+          days, with significant ROI typically seen within 3-6 months.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="contain">
+        <div class="footer-top">
+          <div class="footer-logo">Follow us</div>
+          <div class="icon">
+            <a
+              style="color: rgba(0, 0, 255, 0.932)"
+              href="https://www.facebook.com/malawidigitalmarketers?mibextid=LQQJ4d"
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></a>
+            <a
+              style="color: rgb(247, 5, 5)"
+              href="https://www.youtube.com/@madima.services"
+              ><ion-icon name="logo-youtube"></ion-icon
+            ></a>
+            <a
+              style="color: rgb(0, 162, 255)"
+              href="https://twitter.com/SZuda67733?s=08"
+              ><ion-icon name="logo-twitter"></ion-icon
+            ></a>
+          </div>
+        </div>
+        <div class="footer-middle">
+          <div class="footer-col">
+            <h5>Contact Us</h5>
+            <ul>
+              <li>
+                <a href="mailto:madima.services@gmail.com"
+                  >madima.services@gmail.com</a
+                >
+              </li>
+              <li>+265 998 88 90 70</li>
+              <li>+265 983 55 73 99</li>
+              <li>Blantyre</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Compressions</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: aliceblue">
+          <b>&copy; 2024 Madima. All Rights Reserved.</b> <br /><i
+            >Coded by Amaal</i
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
